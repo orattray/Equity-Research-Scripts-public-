@@ -1,0 +1,11 @@
+Chromedriver download location:
+
+https://chromedriver.chromium.org/downloads
+
+Task scheduler setup document:
+
+https://www.jcchouinard.com/python-automation-using-task-scheduler/
+
+Required packages
+
+pip install requests beautifulsoup4 selenium pandas matplotlib requests plotly
