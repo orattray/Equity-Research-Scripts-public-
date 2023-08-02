@@ -62,7 +62,7 @@ game_data = dict(zip(game_names, viewer_figures))
 csv_file = absolute_path
 
 # Get the current date and time
-current_datetime = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+current_datetime = datetime.datetime.now().strftime('%Y-%m-%d')
 
 # Write the data to the CSV file (append mode)
 with open(csv_file, 'a', newline='') as file:

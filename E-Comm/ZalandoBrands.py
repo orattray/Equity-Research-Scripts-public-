@@ -4,7 +4,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 
 # Set the path to the ChromeDriver executable
-chrome_driver_path = ""
+chrome_driver_path = "C:\Users\OscarRattray\Python scripts\chromedriver\chromedriver.exe"
 
 # Set up ChromeDriver
 service = Service(chrome_driver_path)

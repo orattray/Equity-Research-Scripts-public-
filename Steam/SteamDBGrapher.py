@@ -14,10 +14,10 @@ game_data = {}
 with open(filename, 'r') as csvfile:
     reader = csv.DictReader(csvfile)
     for row in reader:
-        game_name = row['Game Name']
+        game_name = row['Game']
         peak_players = int(row['Peak Players 24hr'])
-        date_time_str = row['Date and Time']
-        date_time_obj = datetime.strptime(date_time_str, '%Y-%m-%d %H:%M:%S')
+        date_time_str = row['Date']
+        date_time_obj = datetime.strptime(date_time_str, '%Y-%m-%d')
         if game_name not in game_data:
             game_data[game_name] = {'dates': [], 'peak_players': []}
         game_data[game_name]['dates'].append(date_time_obj)
@@ -30,7 +30,7 @@ for game_name, data in game_data.items():
 
 # Set the title and axis labels
 ax.set_title('Peak Players on Steam')
-ax.set_xlabel('Date and Time')
+ax.set_xlabel('Date')
 ax.set_ylabel('Peak Players (last 24 hrs)')
 
 # Add a legend and show the plot

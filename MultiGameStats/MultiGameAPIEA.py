@@ -13,14 +13,12 @@ absolute_path = script_directory / relative_path
 
 # URLs of the games' API endpoints
 api_endpoints = {
-    'FIFA 23': 'https://twitchtracker.com/api/games/summary/1745202732',
     'Madden NFL 23': 'https://twitchtracker.com/api/games/summary/862021340',
     'Battlefield 2042': 'https://twitchtracker.com/api/games/summary/514974',
     'NHL 23': 'https://twitchtracker.com/api/games/summary/731327454',
     'F1 23': 'https://twitchtracker.com/api/games/summary/174553474',
     'Star Wars Jedi: Survivor': 'https://twitchtracker.com/api/games/summary/1407096487',
     'The Sims 4': 'https://twitchtracker.com/api/games/summary/369252',
-    'Apex Legends': 'https://twitchtracker.com/api/games/summary/511224'
 }
 
 # Initialize a dictionary to store the average 7-day viewer figures
@@ -59,8 +57,8 @@ for game_name, api_endpoint in api_endpoints.items():
     hours_figures[game_name] = hours_figure
 
 # Get the current date and time
-current_datetime = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-File_datetime = datetime.datetime.now().strftime('%Y-%m-%d %H_%M_%S')
+current_datetime = datetime.datetime.now().strftime('%Y-%m-%d')
+File_datetime = datetime.datetime.now().strftime('%Y-%m-%d')
 
 # Define the CSV file path
 csv_file = absolute_path

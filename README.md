@@ -5,6 +5,25 @@
 
 This repository contains a collection of Python scripts to retrieve data related to games from various sources and visualize it through charts. These scripts are useful for monitoring game popularity, viewer figures, and peak player counts.
 
+# Required Maintenance
+
+## 1. ChromeDriver
+### Instructions to update ChromeDriver
+1. Check your Chrome browser version by going to chrome://settings/help
+2. Delete the existing ChromeDriver executable in the chromedriver folder
+3. Download the latest version of ChromeDriver from https://chromedriver.chromium.org/downloads (make sure to download the correct version for your Chrome browser version)
+4. Extract the zip file and place the executable in the chromedriver folder
+
+## 2. Adding new games to the list of games
+### Instructions to add new games to the list of games
+1. Open the appropriate Python script in VS Code, for example for an EA game, open MultiGameAPIEA.py
+2. Find the ID of the game you would like to add by going to https://twitchtracker.com/games and clicking on the game you want to add
+and then copying the ID from the URL, for example for League of Legends, the ID is 21779
+3. Add the ID to the list of games in the Python script, for example for League of Legends, add 
+'League of Legends': 'https://twitchtracker.com/api/games/summary/21779' to the list of games.
+4. Save the Python script and run it to update the CSV file
+
+
 # Automated Scripts
 
 
@@ -32,7 +51,7 @@ To use this script, make sure you have the ChromeDriver executable and the "grab
 
 This Python script generates graphs for various games and platforms using separate Python scripts for each. The script uses the subprocess module to run each script in a separate thread, allowing for parallel execution. The generated graphs are saved in a folder called "Graphs" in the same directory as the script.
 
-To use this script, make sure you have all the necessary Python scripts in the correct directories. Then, simply run the script and wait for it to finish. The generated graphs will be saved in the "Graphs" folder.
+To use this script, make sure you have all the necessary Python scripts in the correct directories. Then, simply run the script and wait for it to finish.
 
 ### Requirements
 - Python

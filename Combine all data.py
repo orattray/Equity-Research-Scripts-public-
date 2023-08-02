@@ -9,8 +9,10 @@ relative_pathYTdata = Path("Youtube Streams/youtubetopgames.csv")
 absolute_pathYTdata = script_directory / relative_pathYTdata
 relative_pathSteamdata = Path("Steam/Steamdbmostplayed.csv")
 absolute_pathSteamdata = script_directory / relative_pathSteamdata
-relative_pathMultiGamedata = Path("MultiGameStats/Multigameapi.csv")
-absolute_pathMultiGamedata = script_directory / relative_pathMultiGamedata
+relative_pathOtherTwitchdata = Path("MultiGameStats/Multigameapi.csv")
+absolute_pathOtherTwitchdata = script_directory / relative_pathOtherTwitchdata
+relative_pathFifaApexdata = Path("MultiGameStats/FIFAAPEX.csv")
+absolute_pathFifaApexdata = script_directory / relative_pathFifaApexdata
 relative_pathnewdata = Path("combined_data.csv")
 absolute_pathnewdata = script_directory / relative_pathnewdata
 
@@ -18,7 +20,8 @@ absolute_pathnewdata = script_directory / relative_pathnewdata
 csv_paths = [
     absolute_pathEAdata,
     absolute_pathYTdata,
-    absolute_pathMultiGamedata
+    absolute_pathFifaApexdata,
+    absolute_pathOtherTwitchdata
 ]
 
 # Create an empty list to store the dataframes
@@ -35,7 +38,7 @@ for path in csv_paths:
     dfs.append(df)
 
 # Merge the dataframes into one large dataframe, with each CSV file's data in a separate column
-combined_df = pd.concat(dfs, axis=1, keys=['Steam', 'EA', 'YT', 'MultiGame'])
+combined_df = pd.concat(dfs, axis=1, keys=['Steam', 'EA', 'YT', 'Fifa+Apex', 'Other Twitch'])
 
 try:
     # Write the combined dataframe to a new CSV file

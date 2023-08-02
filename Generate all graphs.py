@@ -12,10 +12,12 @@ relative_pathSteamGraphs = Path("Steam/SteamDBGrapher.py")
 absolute_pathSteamGraphs = script_directory / relative_pathSteamGraphs
 relative_pathMultiGameGraphs = Path("MultiGameStats/MultiGameGrapher.py")
 absolute_pathMultiGameGraphs = script_directory / relative_pathMultiGameGraphs
+relative_pathFifaAGraphs = Path("MultiGameStats/FifaApexGrapher.py")
+absolute_pathFifaAGraphs = script_directory / relative_pathFifaAGraphs
 relative_pathGraphsfolder = Path("Graphs")
 absolute_pathGraphsfolder = script_directory / relative_pathGraphsfolder
 
-scripts = [absolute_pathEAGraphs, absolute_pathYTGraphs, absolute_pathSteamGraphs, absolute_pathMultiGameGraphs]
+scripts = [absolute_pathEAGraphs, absolute_pathYTGraphs, absolute_pathSteamGraphs, absolute_pathMultiGameGraphs, absolute_pathFifaAGraphs]
 
 with ThreadPoolExecutor() as executor:
     futures = [executor.submit(subprocess.run, ['python', script], check=True) for script in scripts]

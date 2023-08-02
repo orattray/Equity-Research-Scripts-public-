@@ -11,10 +11,13 @@ relative_pathSteam = Path("Steam/SteamDBScraperv1.py")
 absolute_pathSteam = script_directory / relative_pathSteam
 relative_pathMultiGame = Path("MultiGameStats/MultiGameAPI.py")
 absolute_pathMultiGame = script_directory / relative_pathMultiGame
+relative_pathFifaA = Path("MultiGameStats/EAfifaApexSeperate.py")
+absolute_pathFifaA = script_directory / relative_pathEA
 relative_pathCombine = Path("Combine all data.py")
 absolute_pathCombine = script_directory / relative_pathCombine
 
-scripts = [absolute_pathEA, absolute_pathYT, absolute_pathSteam, absolute_pathMultiGame, absolute_pathCombine]
+
+scripts = [absolute_pathEA, absolute_pathYT, absolute_pathSteam, absolute_pathMultiGame, absolute_pathFifaA ,absolute_pathCombine]
 
 for script in scripts:
     try:

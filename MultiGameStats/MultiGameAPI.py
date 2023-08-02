@@ -59,8 +59,8 @@ for game_name, api_endpoint in api_endpoints.items():
     hours_figures[game_name] = hours_figure
 
 # Get the current date and time
-current_datetime = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-File_datetime = datetime.datetime.now().strftime('%Y-%m-%d %H_%M_%S')
+current_datetime = datetime.datetime.now().strftime('%Y-%m-%d')
+File_datetime = datetime.datetime.now().strftime('%Y-%m-%d')
 
 # Define the CSV file path
 csv_file = absolute_path

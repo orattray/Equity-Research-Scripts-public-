@@ -38,13 +38,30 @@ for row in rows[2:17]:
         peak_players.append(0)
     game_names.append(game_name)
 
-# Append the game names and peak player counts to the existing CSV file with headers and a column for the current date and time
-now = datetime.datetime.now()
-filename = absolute_path
-with open(filename, 'a', newline='') as csvfile:
-    writer = csv.writer(csvfile)
-    for i in range(len(game_names)):
-        writer.writerow([game_names[i], peak_players[i], now.strftime("%Y-%m-%d %H:%M:%S")])
+# Get the current date and time
+current_datetime = datetime.datetime.now().strftime('%Y-%m-%d')
+
+# Combine game names and peak player counts into a dictionary
+game_data = dict(zip(game_names, peak_players))
+
+# Write the data to the CSV file (append mode)
+csv_file = absolute_path
+with open(csv_file, 'a', newline='') as file:
+    writer = csv.writer(file)
+
+    # Check if the file is empty (no header present)
+    is_file_empty = file.tell() == 0
+
+    # Write the header if the file is empty
+    if is_file_empty:
+        writer.writerow(['Date', 'Game', 'Peak Players 24hr'])
+
+    # Write the data rows
+    for game, viewers in game_data.items():
+        writer.writerow([current_datetime, game, viewers])
+
+    # Write an empty row
+    writer.writerow([])
 
 # Print a message indicating where the output was saved
-print(f'Output appended to {filename}')
+print(f'Output appended to {csv_file}')
