@@ -15,6 +15,9 @@ chromedriver_path = absolute_pathchrome
 # Open the ChromeDriver executable
 chrome_process = subprocess.Popen([chromedriver_path])
 
+print("ChromeDriver started, script will run in 5 seconds, Please do not close this window it will autoclose when all scripts are done")
+print ("For help please refer to the documentation on: https://github.com/orattray/Equity-Research-Scripts-public-")
+
 # Wait for the ChromeDriver to start up
 time.sleep(5)
 

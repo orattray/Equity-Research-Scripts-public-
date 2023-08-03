@@ -13,14 +13,18 @@ absolute_path = script_directory / relative_path
 
 # URLs of the games' API endpoints
 api_endpoints = {
-    'Diablo IV': 'https://twitchtracker.com/api/games/summary/515024',
     'GTA V': 'https://twitchtracker.com/api/games/summary/32982',
     'League of Legends': 'https://twitchtracker.com/api/games/summary/21779',
     'Valorant': 'https://twitchtracker.com/api/games/summary/516575',
     'Red Dead Redemption 2': 'https://twitchtracker.com/api/games/summary/493959',
     'PUBG: BATTLEGROUNDS': 'https://twitchtracker.com/api/games/summary/493057',
     'NBA 2K23': 'https://twitchtracker.com/api/games/summary/772421245',
-    'Minecraft': 'https://twitchtracker.com/api/games/summary/27471'
+    'Destiny 2': 'https://twitchtracker.com/api/games/summary/497057',
+    'Cyberpunk 2077': 'https://twitchtracker.com/api/games/summary/65876',
+    'Roblox': 'https://twitchtracker.com/api/games/summary/23020',
+    'Fortnite': 'https://twitchtracker.com/api/games/summary/33214',
+    'Among Us': 'https://twitchtracker.com/api/games/summary/510218',
+    'Rocket League': 'https://twitchtracker.com/api/games/summary/30921',
 }
 
 # Initialize a dictionary to store the average 7-day viewer figures

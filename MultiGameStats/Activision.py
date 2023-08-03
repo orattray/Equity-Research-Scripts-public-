@@ -9,15 +9,19 @@ from pathlib import Path
 print("Waiting for 5 seconds...")
 time.sleep(5)  # Wait for 5 seconds before continuing
 
+
 script_directory = Path(__file__).parent.absolute()
-relative_path = Path("FIFAAPEX.csv")
+relative_path = Path("ActivisionData.csv")
 absolute_path = script_directory / relative_path
 
 
 # URLs of the games' API endpoints
 api_endpoints = {
-    'FIFA 23': 'https://twitchtracker.com/api/games/summary/1745202732',
-    'Apex Legends': 'https://twitchtracker.com/api/games/summary/511224'
+    'Call of Duty: Modern Warfare II': 'https://twitchtracker.com/api/games/summary/1678052513',
+    'Call of Duty: Warzone': 'https://twitchtracker.com/api/games/summary/512710',
+    'Overwatch 2': 'https://twitchtracker.com/api/games/summary/515025',
+    'Diablo IV': 'https://twitchtracker.com/api/games/summary/515024',
+    'World of Warcraft': 'https://twitchtracker.com/api/games/summary/18122'
 }
 
 # Initialize a dictionary to store the average 7-day viewer figures

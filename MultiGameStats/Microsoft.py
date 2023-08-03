@@ -10,14 +10,17 @@ print("Waiting for 5 seconds...")
 time.sleep(5)  # Wait for 5 seconds before continuing
 
 script_directory = Path(__file__).parent.absolute()
-relative_path = Path("FIFAAPEX.csv")
+relative_path = Path("MicrosoftData.csv")
 absolute_path = script_directory / relative_path
 
 
 # URLs of the games' API endpoints
 api_endpoints = {
-    'FIFA 23': 'https://twitchtracker.com/api/games/summary/1745202732',
-    'Apex Legends': 'https://twitchtracker.com/api/games/summary/511224'
+    'Starfield': 'https://twitchtracker.com/api/games/summary/506438',
+    'Fallout 4': 'https://twitchtracker.com/api/games/summary/489776',
+    'Minecraft': 'https://twitchtracker.com/api/games/summary/27471',
+    'Minecraft Dungeons': 'https://twitchtracker.com/api/games/summary/509725',
+    'Halo Infinite': 'https://twitchtracker.com/api/games/summary/506416'
 }
 
 # Initialize a dictionary to store the average 7-day viewer figures
