@@ -21,9 +21,11 @@ relative_pathMicrosoft = Path("MultiGameStats/Microsoft.py")
 absolute_pathMicrosoft = script_directory / relative_pathMicrosoft
 relative_pathCombine = Path("Combine all data.py")
 absolute_pathCombine = script_directory / relative_pathCombine
+relative_pathbackup = Path("BackupCSVs.py")
+absolute_pathbackup = script_directory / relative_pathbackup
 
 
-scripts = [absolute_pathEA, absolute_pathYT, absolute_pathSteam, absolute_pathMultiGame, absolute_pathFifaA , absolute_pathUbisoft, absolute_pathActivision, absolute_pathMicrosoft, absolute_pathCombine]
+scripts = [absolute_pathEA, absolute_pathYT, absolute_pathSteam, absolute_pathMultiGame, absolute_pathFifaA , absolute_pathUbisoft, absolute_pathActivision, absolute_pathMicrosoft, absolute_pathCombine, absolute_pathbackup]
 
 for script in scripts:
     try:

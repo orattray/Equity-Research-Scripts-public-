@@ -19,8 +19,8 @@ api_endpoints = {
     'Starfield': 'https://twitchtracker.com/api/games/summary/506438',
     'Fallout 4': 'https://twitchtracker.com/api/games/summary/489776',
     'Minecraft': 'https://twitchtracker.com/api/games/summary/27471',
-    'Minecraft Dungeons': 'https://twitchtracker.com/api/games/summary/509725',
-    'Halo Infinite': 'https://twitchtracker.com/api/games/summary/506416'
+    'Halo Infinite': 'https://twitchtracker.com/api/games/summary/506416',
+    'Minecraft Dungeons': 'https://twitchtracker.com/api/games/summary/509725'
 }
 
 # Initialize a dictionary to store the average 7-day viewer figures
@@ -29,7 +29,7 @@ hours_figures = {}
 
 for game_name, api_endpoint in api_endpoints.items():
     attempts = 0
-    while attempts < 3:
+    while attempts < 12:
         # Make a GET request to the API endpoint
         response = requests.get(api_endpoint)
 

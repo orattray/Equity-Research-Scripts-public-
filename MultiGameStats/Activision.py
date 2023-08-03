@@ -30,7 +30,7 @@ hours_figures = {}
 
 for game_name, api_endpoint in api_endpoints.items():
     attempts = 0
-    while attempts < 3:
+    while attempts < 12:
         # Make a GET request to the API endpoint
         response = requests.get(api_endpoint)
 
