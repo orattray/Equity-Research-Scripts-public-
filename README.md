@@ -5,6 +5,16 @@
 
 This repository contains a collection of Python scripts to retrieve data related to games from various sources and visualize it through charts. These scripts are useful for monitoring game popularity, viewer figures, and peak player counts.
 
+# First Time Setup
+## 1. Install Python version 3.9.6 or higher
+## 2. Install required packages
+### Instructions to install required packages
+1. Open the command prompt
+2. Run the following command to install the required packages:
+   ```
+   pip install selenium pandas matplotlib requests plotly seaborn
+   ```
+
 # Required Maintenance
 
 ## 1. ChromeDriver

@@ -1,6 +1,10 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+import seaborn as sns
 from pathlib import Path
+
+# Use Seaborn's default style for better visuals
+sns.set_style("whitegrid")
 
 script_directory = Path(__file__).parent.absolute()
 relative_path = Path("youtubetopgames.csv")
@@ -12,15 +16,13 @@ df = pd.read_csv(absolute_path, parse_dates=['DateTime'])
 # Convert viewer figures to integers
 df['Viewer Figure'] = df['Viewer Figure'].str.replace('K', '000').str.replace('.', '').astype(int)
 
-# Group by game and plot a line graph for each game
-fig, ax = plt.subplots()
+fig, ax = plt.subplots(figsize=(10, 8))
 for game, data in df.groupby('Game'):
     ax.plot(data['DateTime'], data['Viewer Figure'], label=game)
 
-# Add labels and legend
-plt.xlabel('Time')
-plt.ylabel('Viewers')
-plt.legend()
-
-# Show the plot
+ax.set_xlabel('Time')
+ax.set_ylabel('Viewers')
+ax.legend(loc='upper left', bbox_to_anchor=(1, 1))
+plt.xticks(rotation=45)
+plt.tight_layout()
 plt.show()

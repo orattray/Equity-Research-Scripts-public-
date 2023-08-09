@@ -8,4 +8,4 @@ https://www.jcchouinard.com/python-automation-using-task-scheduler/
 
 Required packages
 
-pip install requests beautifulsoup4 selenium pandas matplotlib requests plotly
+pip install selenium pandas matplotlib requests plotly seaborn

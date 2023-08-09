@@ -19,7 +19,6 @@ api_endpoints = {
     'Rainbow Six Siege': 'https://twitchtracker.com/api/games/summary/460630',
     'The Division 2': 'https://twitchtracker.com/api/games/summary/504463',
     'Assasins Creed Valhalla': 'https://twitchtracker.com/api/games/summary/517330',
-    'Assasin Creed Mirage': 'https://twitchtracker.com/api/games/summary/273333352',
     'Watch Dogs: Legion': 'https://twitchtracker.com/api/games/summary/512895'
 }
 
